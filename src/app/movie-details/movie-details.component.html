@@ -1,0 +1,42 @@
+<button (click)="goToMovieList()">Back</button>
+<div *ngIf="movie">
+  <div>
+    <h2>{{ movie.title }}</h2>
+  </div>
+  <div class="movie-details-container">
+    <div class="poster-container">
+      <img [src]="movie.poster" alt="Movie Poster">
+    </div>
+    <div class="details-container">
+      <div class="summary">
+        <h2>Summary</h2>
+        <p>{{ movie.summary }}</p>
+      </div>
+      <div class="table-container">
+        <h2>Movie Details</h2>
+        <table>
+          <tr>
+            <td>Box Office</td>
+            <td>${{ movie.box_office }} million</td>
+          </tr>
+          <tr>
+            <td>Budget</td>
+            <td>${{ movie.budget }} million</td>
+          </tr>
+          <tr>
+            <td>Duration</td>
+            <td>{{ movie.duration }} minutes</td>
+          </tr>
+          <tr>
+            <td>Producers</td>
+            <td>{{ movie.producers.join(', ') }}</td>
+          </tr>
+          <tr>
+            <td>Cinematographers</td>
+            <td>{{ movie.cinematographers.join(', ') }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

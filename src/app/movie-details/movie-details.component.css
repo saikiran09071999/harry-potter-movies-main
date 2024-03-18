@@ -1,0 +1,41 @@
+.movie-details-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.poster-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.poster-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.details-container {
+  flex: 2;
+}
+
+.summary {
+  margin-bottom: 20px;
+}
+
+.table-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.table-container table {
+  width: 100%;
+}
+
+.table-container td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.table-container td:first-child {
+  font-weight: bold;
+}

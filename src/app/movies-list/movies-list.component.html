@@ -1,0 +1,24 @@
+<div *ngIf="movies">
+  <div class="filter-container">
+    <div class="filter-item">
+      <label for="titleInputFilter">Title:</label>
+      <input type="text" id="titleInputFilter" [(ngModel)]="titleInputFilter">
+    </div>
+    <div class="filter-item">
+      <label for="yearInputFilter">Release Year:</label>
+      <input type="text" id="yearInputFilter" [(ngModel)]="yearInputFilter">
+    </div>
+  </div>
+  <ul class="movie-list">
+    <li *ngFor="let movie of filteredMoviesList" class="movie-item">
+      <div class="movie-info">
+        <h2 class="movie-title">{{ movie.title }}</h2>
+        <span class="movie-details">
+          Release Date: {{ movie.release_date }} Budget: ${{ movie.budget }} million Duration: {{ movie.duration }}
+          minutes
+        </span>
+      </div>
+      <button class="details-button" (click)="goToMovieDetails(movie.id)">Details</button>
+    </li>
+  </ul>
+</div>

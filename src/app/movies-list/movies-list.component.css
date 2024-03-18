@@ -1,0 +1,44 @@
+.movie-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.movie-item {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-info {
+  flex-grow: 1;
+}
+
+.movie-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.movie-details {
+  font-size: 14px;
+}
+
+.details-button {
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+}
+
+.filter-container {
+  display: flex;
+}
+
+.filter-item {
+  flex: 1;
+}
