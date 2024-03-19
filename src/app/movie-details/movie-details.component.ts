@@ -28,6 +28,13 @@ export class MovieDetailsComponent {
     });
   }
 
+  convertTimeDuration(duration: string): string {
+    const durationInMinutes = parseInt(duration);
+    const hours = Math.floor(durationInMinutes / 60);
+    const minutes = durationInMinutes % 60;
+    return `${hours}h ${minutes}min`;
+  }
+  
   goToMovieList() {
     this.router.navigate(['/moviedashboard']);
   }
