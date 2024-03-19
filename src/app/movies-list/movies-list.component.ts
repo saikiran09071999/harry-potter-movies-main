@@ -46,6 +46,13 @@ export class MoviesListComponent {
     return filteredMoviesList;
   }
 
+  convertTimeDuration(duration: string): string {
+    const durationInMinutes = parseInt(duration);
+    const hours = Math.floor(durationInMinutes / 60);
+    const minutes = durationInMinutes % 60;
+    return `${hours}h ${minutes}min`;
+  }
+
   goToMovieDetails(movieId: string) {
     this.router.navigate(['/details', movieId]);
   }

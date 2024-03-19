@@ -14,8 +14,7 @@
       <div class="movie-info">
         <h2 class="movie-title">{{ movie.title }}</h2>
         <span class="movie-details">
-          Release Date: {{ movie.release_date }} Budget: ${{ movie.budget }} million Duration: {{ movie.duration }}
-          minutes
+          Release Date: {{ movie.release_date }} Budget: ${{ movie.budget }} million Duration: {{ convertTimeDuration(movie.duration) }}
         </span>
       </div>
       <button class="details-button" (click)="goToMovieDetails(movie.id)">Details</button>
